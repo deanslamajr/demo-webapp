@@ -1,0 +1,18 @@
+query SearchForArtist ($query: String!) {
+  search {
+    artists(query: $query) {
+      nodes {
+        id: mbid
+        name
+        area {
+          name
+        }
+        lifeSpan {
+          begin
+          end
+          ended
+        }
+      }
+    }
+  }
+}
